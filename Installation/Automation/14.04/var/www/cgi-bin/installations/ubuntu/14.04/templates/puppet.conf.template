@@ -1,0 +1,14 @@
+#--------------------------------------------------------------------------------
+# [Author]  Masayuki Onishi
+# [History] Ver 1.0 10 JUL 2016 initial for Ubuntu 14.04
+#--------------------------------------------------------------------------------
+# [Function]
+#     Template for puppet.conf.
+#--------------------------------------------------------------------------------
+[main]
+server=${PUPPET_HOSTNAME}.${DNS_DOMAIN}
+environment=${PUPPET_ENVIRONMENT}
+
+[agent]
+logdir=${PUPPET_LOG_DIR}
+

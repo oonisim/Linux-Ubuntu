@@ -1,0 +1,21 @@
+#--------------------------------------------------------------------------------
+# [Author]  Masayuki Onishi
+# [History] Ver 1.0 10 JUL 2016 initial for Ubuntu 14.04
+#--------------------------------------------------------------------------------
+# [Function]
+#     Template for additinal disk partition/file system configuration.
+#     Preseed can handle only one disk, hence to handle multiple disks at the
+#     installation, additional configuration is required.
+#--------------------------------------------------------------------------------
+
+#--------------------------------------------------------------------------------
+# Partition disk sdb1 with XFS file system
+#--------------------------------------------------------------------------------
+if [ -r /dev/sdb ]; then
+    echo "Partition /dev/sdb and create XFS file system"
+    apt-get install xfsprogs
+    echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/sdb
+    mkfs.xfs -f /dev/sdb1
+    echo "/dev/sdb1  /data  xfs  nodiratime  0  2" >> /etc/fstab
+fi
+

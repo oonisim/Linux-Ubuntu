@@ -1,0 +1,36 @@
+#!/bin/bash
+#--------------------------------------------------------------------------------
+# [Function] 
+#     Generate Ubuntu preseeding configuration file.
+#     Preseeding (plus kickstart) focuses on Ubuntu OS generic installation.
+#     Post configuration script handles site specific configurations.
+#     Do NOT mix them up and place clear separation and isolation.
+#--------------------------------------------------------------------------------
+# [Author]  Masayuki Onishi
+# [History] Ver 1.0 10 JUL 2016 initial for Ubuntu 14.04
+#--------------------------------------------------------------------------------
+
+set -e -u
+echo -e "Content-type: text/plain\n\n"
+
+#--------------------------------------------------------------------------------
+# Load the host configuration of the host being installed, then the site property.
+# The site property depends host configuration information.
+#--------------------------------------------------------------------------------
+. ./_loadHostConfig.sh
+. ./properties/site.properties
+
+#--------------------------------------------------------------------------------
+# To avoid $primary and $bootable in partman configuration being expanded by bash.
+#--------------------------------------------------------------------------------
+primary='$primary'
+bootable='$bootable'
+
+#--------------------------------------------------------------------------------
+# preseed.txt
+#--------------------------------------------------------------------------------
+while read line
+do
+    eval echo -e "$line"
+done < "./templates/preseed.txt.template"
+echo -e "\n"

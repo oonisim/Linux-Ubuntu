@@ -1,0 +1,34 @@
+#--------------------------------------------------------------------------------
+# [Author]  Masayuki Onishi
+# [History] Ver 1.0 10 JUL 2016 initial for Ubuntu 14.04
+#--------------------------------------------------------------------------------
+# [Function]
+#     Template for Puppet installation and execution script.
+#     If there is no internet connnection ($NOINTERNET=true), setup the apt-get
+#     source list for Puppet for internal repository and place the GPG key.
+#     If there is internet connection, then follow the normal Puppet installation
+#     steps specified in the Puppet document.
+#--------------------------------------------------------------------------------
+
+"#--------------------------------------------------------------------------------"
+"# Install Puppet agent"
+"#--------------------------------------------------------------------------------"
+"if ${NOINTERNET} ; then"
+    wget -O ${APT_HOME}/sources.list.d/puppetlabs-pc1.list http://${HTTPD_HOST}/cgi-bin/${SCRIPT_PATH}/puppetlabs-pc1.list
+    wget -O ${APT_HOME}/trusted.gpg.d/puppetlabs-pc1-keyring.gpg http://${HTTPD_HOST}/${SCRIPT_PATH}/puppetlabs-pc1-keyring.gpg
+"else"
+    wget https://${PUPPET_REPOSITORY_HOST}/puppetlabs-release-${PUPPET_SUITE_NAME}-${UBUNTU_CODENAME}.deb
+    dpkg -i puppetlabs-release-${PUPPET_SUITE_NAME}-${UBUNTU_CODENAME}.deb
+"fi"
+apt-get update
+apt-get install puppet-agent
+
+"#--------------------------------------------------------------------------------"
+"# Place Puppet configuration"
+"#--------------------------------------------------------------------------------"
+wget -O ${PUPPET_HOME}/puppet/puppet.conf http://${HTTPD_HOST}/cgi-bin/${SCRIPT_PATH}/puppet.conf
+
+"#--------------------------------------------------------------------------------"
+"# Puppet synchronize with master"
+"#--------------------------------------------------------------------------------"
+${PUPPET_BIN_DIR}/puppet agent --test

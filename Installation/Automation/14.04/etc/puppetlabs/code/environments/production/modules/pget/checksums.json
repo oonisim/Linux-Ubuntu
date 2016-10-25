@@ -1,0 +1,15 @@
+{
+  "CHANGELOG.md": "cfc2fc5a4f84a4c6f987c27b2f8c60f3",
+  "Gemfile": "8ab629ac33efc25ca319ee2f2e4d7c9f",
+  "LICENSE": "f0b6fdc310531526f257378d7bad0044",
+  "README.md": "878a9fd5a956e9f3116b3d06f7d4807a",
+  "Rakefile": "d7ad3603794b56522a8423c21cbed8d2",
+  "lib/puppet/parser/functions/build_header_cmd.rb": "516eaff2db12d95f4abc28c703b2ecd9",
+  "lib/puppet/parser/functions/pget_filename.rb": "0671c9919dd831be8c27e2ed49aef89d",
+  "manifests/init.pp": "22b4a1b0c357bbaa58d6cb2d55b4e8c2",
+  "metadata.json": "7e8138b1cc6f7ddd4895276b0edc3b01",
+  "spec/defines/pget_spec.rb": "f45d9d30036e0d5f031297eae1f4a365",
+  "spec/functions/build_header_cmd_spec.rb": "97c02913a324b48783eefff0622c9d15",
+  "spec/functions/filename_spec.rb": "f3506be072bc4f7844b3a78b2d036f23",
+  "spec/spec_helper.rb": "0e3d1503aefeae4cdaac6d1951213b2d"
+}

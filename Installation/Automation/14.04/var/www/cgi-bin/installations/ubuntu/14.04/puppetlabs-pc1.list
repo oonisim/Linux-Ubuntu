@@ -1,0 +1,27 @@
+#!/bin/bash
+#--------------------------------------------------------------------------------
+# [Function] 
+#     Generate apt-get source list for Puppet repository.
+#--------------------------------------------------------------------------------
+# [Author]  Masayuki Onishi
+# [History] Ver 1.0 10 JUL 2016 initial for Ubuntu 14.04
+#--------------------------------------------------------------------------------
+
+set -e -u 
+echo -e "Content-type: text/plain\n\n"
+
+#--------------------------------------------------------------------------------
+# Load the host configuration of the host being installed, then the site property.
+# The site property depends host configuration information.
+#--------------------------------------------------------------------------------
+. ./_loadHostConfig.sh
+. ./properties/site.properties
+
+#--------------------------------------------------------------------------------
+# puppetlabs-pc1.list
+#--------------------------------------------------------------------------------
+while read line
+do
+    eval echo -e "$line"
+done < "./templates/puppetlabs-pc1.list.template"
+echo -e "\n"

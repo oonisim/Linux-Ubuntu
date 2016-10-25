@@ -1,0 +1,13 @@
+#--------------------------------------------------------------------------------
+# [Author]  Masayuki Onishi
+# [History] Ver 1.0 10 JUL 2016 initial for Ubuntu 14.04
+#--------------------------------------------------------------------------------
+# [Function]
+#     Template for apt-get source list for Puppet repository based on the Puppetlabs
+#     PC1 trusty Repository configurations from the original installation.
+#     The Puppet code must be capital such as PC1, not pc1 in sourcelist.
+#--------------------------------------------------------------------------------
+#deb http://apt.puppetlabs.com trusty PC1
+deb http://${PUPPET_REPOSITORY_HOST}/${PUPPET_REPOSITORY_PATH} ${UBUNTU_CODENAME} ${PUPPET_SUITE_CODE}
+
+# END

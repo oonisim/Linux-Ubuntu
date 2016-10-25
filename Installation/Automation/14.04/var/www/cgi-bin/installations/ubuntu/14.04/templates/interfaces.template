@@ -1,0 +1,21 @@
+#--------------------------------------------------------------------------------
+# [Author]  Masayuki Onishi
+# [History] Ver 1.0 10 JUL 2016 initial for Ubuntu 14.04
+#--------------------------------------------------------------------------------
+# [Function]
+#     Template for Ubuntu network interface configuration.
+#--------------------------------------------------------------------------------
+
+"#--------------------------------------------------------------------------------"
+"# Network Interface (auto generation at installation)"
+"#--------------------------------------------------------------------------------"
+"auto ${INTERFACE}"
+"iface ${INTERFACE} inet static"
+"        address ${ADDRESS}"
+"        netmask ${NETMASK}"
+"        network ${NETWORK}"
+"        broadcast ${BROADCAST}"
+"        gateway ${GATEWAY}"
+"        # dns-* options are implemented by the resolvconf package, if installed"
+"        dns-nameservers ${DNS_NAMESERVERS}"
+"        dns-search ${DNS_SEARCH}"
