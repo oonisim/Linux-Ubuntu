@@ -1,0 +1,23 @@
+;--------------------------------------------------------------------------------
+; [Author]  Masayuki Onishi
+; [History] Ver 1.0 10JUL2016 initial for Sydney the ACTA environment.
+;--------------------------------------------------------------------------------
+; BIND reverse data file for broadcast zone
+;--------------------------------------------------------------------------------
+$TTL	604800
+@	IN	SOA	demo.local. root.localhost. (
+			      5		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+
+102.96.143.in-addr.arpa.	IN	NS	admin.wynyarddemo.local.
+
+140	IN	PTR	repository.demo.local.
+141	IN	PTR	sydm01.emo.local.
+142     IN      PTR     sydm02.demo.local.
+143     IN      PTR     syds01.demo.local.
+144     IN      PTR     syds02.demo.local.
+145     IN      PTR     syds03.demo.local.
