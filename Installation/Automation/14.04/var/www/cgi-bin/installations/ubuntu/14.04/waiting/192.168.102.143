@@ -1,4 +1,8 @@
+# The hostname of the server to be deployed.
 HOSTNAME="syds01"
+# The network I/F to use in the server to be deployed.
 INTERFACE="eth0"
+# The static IP address of the server to be deployed.
 ADDRESS="192.168.102.143"
+# Switch for no-internet access environment in which a mirrored Ubuntu repository exists.
 NOINTERNET=true
