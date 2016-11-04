@@ -1,9 +1,12 @@
 # Ubuntu automated deployment with Kickstart and Preseeding
-* Pre-configured ISO image pointing to a web server from which to download kickstart and preseeding files.
-* Web server CGI that dynamically generate kickstart and preseeding files from templates for each server deployment.
-* Post configurations with Puppet to setup server middleware and applications.
-* Ready for air-gapped (no Internet access) environment.
-* PXE ready (tested).
+
+Just power-on the server and Ubuntu Linux will be deployed without any human interaction. 
+Using pre-configured ISO image pointing to a web server from which to download kickstart and preseeding files. Web server CGI  dynamically generates kickstart and preseeding files from templates for each server deployment.
+
+* Unlimited number of simultaneous deployments (currently using CGI, so number of processes in a web server will be the limit).
+* Ready for PXE (tested).
+* Ready for no Internet access environment (tested)
+* Post configurations with Puppet to further configure server.
 
 ![Overview](https://github.com/oonisim/Linux-Ubuntu/blob/master/Installation/Automation/14.04/AutoInstallationArch.jpg)
 
