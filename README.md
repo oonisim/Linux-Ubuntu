@@ -1,6 +1,7 @@
 # Ubuntu automated deployment with Kickstart and Preseeding
 
-Just power-on the server and Ubuntu Linux will be deployed without any human interaction. 
+Just power-on the server and Ubuntu Linux will be deployed with no human interaction. 
+
 Using pre-configured ISO image pointing to a web server from which to download kickstart and preseeding files. Web server CGI  dynamically generates kickstart and preseeding files from templates for each server deployment.
 
 * Unlimited number of simultaneous deployments (currently using CGI, so number of processes in a web server will be the limit).
