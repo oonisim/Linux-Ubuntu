@@ -76,7 +76,7 @@ openssh-server  openssh-server/permit-root-login    boolean false
 d-i passwd/root-login boolean false
   
 # To create a normal user account.
-d-i passwd/user-fullname string Wynyard Admin
+d-i passwd/user-fullname string Admin
 d-i passwd/username string ${USERNAME}
 d-i passwd/user-password-crypted password ${PASSWORD}
   
