@@ -37,6 +37,10 @@ Customize the ISO image to surpress questions, and to download kickstart/preseed
 ## Preseeding
 Use HTTPD CGI to dynamically generate the preseed.txt.
 
+When ISO image access preceed.txt CGI, it picks up one server configuration seed file with IP as its name i.e [192.168.102.141](https://github.com/oonisim/Linux-Ubuntu/blob/master/Installation/Automation/14.04/var/www/cgi-bin/installations/ubuntu/14.04/waiting/192.168.102.141) from the waiting directory, and move it to done directory. CGI can utilize the REMOTE_ADDRESS env variable to get IP, with which you can identify the seed file and which server is accessing.
+
+[site.properties](https://github.com/oonisim/Linux-Ubuntu/blob/master/Installation/Automation/14.04/var/www/cgi-bin/installations/ubuntu/14.04/properties/site.properties) file it where to specify the site information within which the deployment occurs.
+
 ## Kickstart
 Use HTTPD CGI to dynamically generate the ks.cfg. %post section downloads the post_install.sh.
 
