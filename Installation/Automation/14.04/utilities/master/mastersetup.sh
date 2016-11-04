@@ -5,9 +5,9 @@ os="ubuntu"
 OS="Ubuntu"
 OSVERSION="14.04"
 
-repodir="/home/wynadmin/repository"
+repodir="/home/admin/repository"
 repository="TechSAPAC"
-giturl="ssh://gitolite3@gitgs.wynyardgroup.com:443/${repository}"
+giturl="ssh://gitolite3@git.demo.local:443/${repository}"
 gitdir="${repodir}/${repository}/Technical/Linux/${OS}/Installation/Automation/${OSVERSION}"
 
 cgiusr="www-data"
