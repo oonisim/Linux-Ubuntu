@@ -29,3 +29,11 @@ Customize the ISO image to surpress questions, and to download kickstart/preseed
       append  initrd=/install/initrd.gz ks=http://192.168.2.10/cgi-bin/ks.cfg preseed/url=http://192.168.2.10/preseed.txt netcfg/choose_interface=eth0
 ```   
       
+## Kickstart
+Use HTTPD CGI to dynamically generate the ks.cfg.
+
+## Preseeding
+Use HTTPD CGI to dynamically generate the preseed.txt.
+
+## Post installation
+Download post_install.sh to further configure the server with configuration management tool such as puppet.
