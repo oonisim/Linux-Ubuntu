@@ -1,0 +1,23 @@
+;--------------------------------------------------------------------------------
+; [Author]  Masayuki Onishi
+; [History] Ver 1.0 10JUL2016 initial for Sydney the ACTA environment.
+;--------------------------------------------------------------------------------
+;
+$TTL	86400
+@	IN	SOA	wynyarddemo.local. root.localhost. (
+			      5		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			  86400 )	; Negative Cache TTL
+;
+@          IN      NS      localhost.
+repository  IN      A       192.96.102.140
+sydm01  IN          A       192.96.102.141
+sydm02  IN          A       192.96.102.142
+syds01  IN          A       192.96.102.143
+syds02  IN          A       192.96.102.144
+syds03  IN          A       192.96.102.145
+admin       IN      A       192.96.102.150
+puppet      IN      A       192.96.102.150
+ntp         IN      A       192.96.102.150
