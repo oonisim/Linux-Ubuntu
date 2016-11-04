@@ -11,7 +11,7 @@ giturl="ssh://gitolite3@gitgs.wynyardgroup.com:443/${repository}"
 gitdir="${repodir}/${repository}/Technical/Linux/${OS}/Installation/Automation/${OSVERSION}"
 
 cgiusr="www-data"
-cgigrp="wynadmin"
+cgigrp="admin"
 wwwdir="/var/www"
 cgidir="/var/www/cgi-bin/installations/${os}/${OSVERSION}"
 
