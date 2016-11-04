@@ -1,6 +1,6 @@
 define site_user::ssh_user ($password, $key, $keytype){
     @user { "${name}":
-        comment  => "Wynyard product operation user",
+        comment  => "Operation user",
         ensure   => present,
         password => "${password}", 
         home     => "/home/${name}",
