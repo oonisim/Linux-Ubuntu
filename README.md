@@ -3,6 +3,7 @@
 * Web server CGI that dynamically generate kickstart and preseeding files from templates for each server deployment.
 * Post configurations with Puppet to setup server middleware and applications.
 * Ready for air-gapped (no Internet access) environment.
+* PXE ready (tested).
 
 ![Overview](https://github.com/oonisim/Linux-Ubuntu/blob/master/Installation/Automation/14.04/AutoInstallationArch.jpg)
 
@@ -29,11 +30,14 @@ Customize the ISO image to surpress questions, and to download kickstart/preseed
       append  initrd=/install/initrd.gz ks=http://192.168.2.10/cgi-bin/ks.cfg preseed/url=http://192.168.2.10/preseed.txt netcfg/choose_interface=eth0
 ```   
       
-## Kickstart
-Use HTTPD CGI to dynamically generate the ks.cfg.
-
 ## Preseeding
 Use HTTPD CGI to dynamically generate the preseed.txt.
 
+## Kickstart
+Use HTTPD CGI to dynamically generate the ks.cfg. %post section downloads the post_install.sh.
+
 ## Post installation
-Download post_install.sh to further configure the server with configuration management tool such as puppet.
+Use HTTPD CGI to dynamically generate the post_install.sh to further configure the server with Puppet.
+
+## Puppet
+Configure NTP, DNS, and other package installations and configurations.
