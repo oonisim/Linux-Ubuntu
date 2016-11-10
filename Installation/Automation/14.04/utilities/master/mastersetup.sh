@@ -5,13 +5,13 @@ os="ubuntu"
 OS="Ubuntu"
 OSVERSION="14.04"
 
-repodir="/home/admin/repository"
+repodir="/home/wynadmin/repository"
 repository="TechSAPAC"
-giturl="ssh://gitolite3@git.demo.local:443/${repository}"
+giturl="ssh://gitolite3@gitgs.wynyardgroup.com:443/${repository}"
 gitdir="${repodir}/${repository}/Technical/Linux/${OS}/Installation/Automation/${OSVERSION}"
 
 cgiusr="www-data"
-cgigrp="admin"
+cgigrp="wynadmin"
 wwwdir="/var/www"
 cgidir="/var/www/cgi-bin/installations/${os}/${OSVERSION}"
 
@@ -55,7 +55,7 @@ sudo service puppetserver start
 echo '--------------------------------------------------------------------------------'
 echo 'Run puppet agent to configure the master server itself ...'
 echo '--------------------------------------------------------------------------------'
-echo "192.96.102.150 puppet.demo.local" | sudo tee -a /etc/hosts
+echo "143.96.102.150 puppet.wynyarddemo.local" | sudo tee -a /etc/hosts
 
 sudo $(which puppet) cert sign --all
 sudo $(which puppet) agent --test

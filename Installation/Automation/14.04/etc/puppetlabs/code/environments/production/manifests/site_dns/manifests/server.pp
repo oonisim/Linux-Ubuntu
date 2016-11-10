@@ -17,21 +17,21 @@ class site_dns::server {
         allow_query       => [ 'any' ],
         directory         => '/etc/bind',
         includes          => ['/etc/bind/named.conf.local', '/etc/bind/named.conf.default-zones'],
-        forwarders        => [ '192.96.102.2', '192.96.102.3', '8.8.8.8', '8.8.4.4' ],
+        forwarders        => [ '143.96.102.2', '143.96.102.3', '8.8.8.8', '8.8.4.4' ],
         zones             => {
             'wynyarddemo.local' => [
                 'type master',
-                'file "db.demo.local"',
+                'file "db.wynyarddemo.local"',
             ],
             '102.96.143.in-addr.arpa' => [
                 'type master',
-                'file "102.96.192.in-addr.arpa"',
+                'file "102.96.143.in-addr.arpa"',
             ],
         },
     }
     bind::server::file { [
-            'db.demo.local',
-            '102.96.192.in-addr.arpa',
+            'db.wynyarddemo.local',
+            '102.96.143.in-addr.arpa',
         ]:
         zonedir     => '/etc/bind',
         source_base => 'puppet:///site_files/site_dns/files/',
