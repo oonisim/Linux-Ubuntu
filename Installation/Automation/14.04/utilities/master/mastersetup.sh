@@ -6,9 +6,9 @@ OS="Ubuntu"
 OSVERSION="14.04"
 
 repodir="/home/wynadmin/repository"
-repository="TechSAPAC"
-giturl="ssh://gitolite3@gitgs.wynyardgroup.com:443/${repository}"
-gitdir="${repodir}/${repository}/Technical/Linux/${OS}/Installation/Automation/${OSVERSION}"
+repository="Linux-Ubuntu"
+giturl="https://github.com/oonisim/${repository}.git"
+gitdir="${repodir}/${repository}/Installation/Automation/${OSVERSION}"
 
 cgiusr="www-data"
 cgigrp="wynadmin"
