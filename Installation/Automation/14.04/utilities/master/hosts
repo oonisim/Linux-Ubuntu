@@ -1,12 +1,12 @@
 127.0.0.1	localhost
-143.96.102.150	masatest.wynyarddemo.local	masatest
+143.96.102.148	masatest.wynyarddemo.local	masatest
 #--------------------------------------------------------------------------------
 # It seems if puppet hostname is defined in hosts while Puppet server is being 
 # starting up, https://tickets.puppetlabs.com/browse/SERVER-528 may happen.
 # Enable it only after puppet server has started.
 #--------------------------------------------------------------------------------
 #143.96.102.150	puppet.wynyarddemo.local	
-164.177.143.203 gitgs.wynyardgroup.com          
+#164.177.143.203 gitgs.wynyardgroup.com          
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     localhost ip6-localhost ip6-loopback
