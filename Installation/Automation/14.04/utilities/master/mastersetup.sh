@@ -61,6 +61,7 @@ eval "sudo cp -r ${gitdir}/etc/* /etc/"
 
 echo '--------------------------------------------------------------------------------'
 echo 'Starting Puppet Server'
+echo ' If you see "Notice: Starting Puppet master version xxx", press CTRL-C.'
 echo '--------------------------------------------------------------------------------'
 sudo ${puppet} resource service puppetserver ensure=running
 sudo service puppetserver start
