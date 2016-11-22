@@ -1,8 +1,11 @@
 # Ubuntu automated deployment with Kickstart and Preseeding
 
-Just power-on the server and Ubuntu Linux will be deployed with no human interaction. 
+Just power-on the server and Ubuntu Linux will be deployed with no human interaction. Using ISO Linux for boot loading, Kickstart/Preseeding for Ubuntu installation, and Puppet for OS/Middleware/Application isntallations and configurations.
 
-Using pre-configured ISO image pointing to a web server from which to download kickstart and preseeding files. Web server CGI  dynamically generates kickstart and preseeding files from templates for each server deployment.
+![Stack](https://github.com/oonisim/Linux-Ubuntu/blob/master/Installation/Automation/14.04/AutoInstallationStack.png)
+
+
+Pre-configured ISO image pointing to a web server from which to download kickstart and preseeding files. Web server CGI  dynamically generates kickstart and preseeding files from templates for each server deployment. Kickstart post section downloads post installation script to deploy Puppet agent to configure the OS and install middleware/applications.
 
 * Unlimited number of simultaneous deployments (currently using CGI, so number of processes in a web server will be the limit).
 * Ready for PXE (tested).
@@ -10,7 +13,6 @@ Using pre-configured ISO image pointing to a web server from which to download k
 * Post configurations with Puppet to further configure server.
 
 ![Overview](https://github.com/oonisim/Linux-Ubuntu/blob/master/Installation/Automation/14.04/AutoInstallationArch.jpg)
-![Stack](https://github.com/oonisim/Linux-Ubuntu/blob/master/Installation/Automation/14.04/AutoInstallationStack.png)
 
 ## ISO Image
 Customize the ISO image to surpress questions, and to download kickstart/preseeding files from the web server.
