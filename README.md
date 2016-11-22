@@ -10,6 +10,7 @@ Using pre-configured ISO image pointing to a web server from which to download k
 * Post configurations with Puppet to further configure server.
 
 ![Overview](https://github.com/oonisim/Linux-Ubuntu/blob/master/Installation/Automation/14.04/AutoInstallationArch.jpg)
+![Stack](https://github.com/oonisim/Linux-Ubuntu/blob/master/Installation/Automation/14.04/AutoInstallationStack.png)
 
 ## ISO Image
 Customize the ISO image to surpress questions, and to download kickstart/preseeding files from the web server.
