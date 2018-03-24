@@ -19,9 +19,9 @@ class site_dns::server {
         includes          => ['/etc/bind/named.conf.local', '/etc/bind/named.conf.default-zones'],
         forwarders        => [ '143.96.102.2', '143.96.102.3', '8.8.8.8', '8.8.4.4' ],
         zones             => {
-            'wynyarddemo.local' => [
+            'demo.local' => [
                 'type master',
-                'file "db.wynyarddemo.local"',
+                'file "db.demo.local"',
             ],
             '102.96.143.in-addr.arpa' => [
                 'type master',
@@ -30,7 +30,7 @@ class site_dns::server {
         },
     }
     bind::server::file { [
-            'db.wynyarddemo.local',
+            'db.demo.local',
             '102.96.143.in-addr.arpa',
         ]:
         zonedir     => '/etc/bind',

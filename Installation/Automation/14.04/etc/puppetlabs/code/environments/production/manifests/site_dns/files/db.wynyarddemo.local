@@ -4,7 +4,7 @@
 ;--------------------------------------------------------------------------------
 ;
 $TTL	86400
-@	IN	SOA	wynyarddemo.local. root.localhost. (
+@	IN	SOA	demo.local. root.localhost. (
 			      5		; Serial
 			 604800		; Refresh
 			  86400		; Retry

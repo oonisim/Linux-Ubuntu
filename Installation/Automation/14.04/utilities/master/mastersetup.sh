@@ -72,7 +72,7 @@ sudo service puppetserver start
 echo '--------------------------------------------------------------------------------'
 echo 'Run puppet agent to configure the master server itself ...'
 echo '--------------------------------------------------------------------------------'
-echo "143.96.102.150 puppet.wynyarddemo.local" | sudo tee -a /etc/hosts
+echo "143.96.102.150 puppet.demo.local" | sudo tee -a /etc/hosts
 
 sudo ${puppet} cert sign --all
 sudo ${puppet} agent --test

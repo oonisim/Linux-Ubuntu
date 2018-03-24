@@ -6,7 +6,7 @@
 # site specific puppet configurations
 #--------------------------------------------------------------------------------
 
-$ntp_server  = 'ntp.wynyarddemo.local'
+$ntp_server  = 'ntp.demo.local'
 notify { "hostname is ${::hostname}" : }
 
 if $::kernel == 'windows' {
@@ -176,7 +176,7 @@ node /^actasyddc0[1-9]$/ {
     #--------------------------------------------------------------------------------
     # Windows Domain
     #--------------------------------------------------------------------------------
-    $windowsDomain="wynyarddemo.local"
+    $windowsDomain="demo.local"
     class {'site_windows::dc':
         domainName => $windowsDomain,
         domainHost => $::hostname 

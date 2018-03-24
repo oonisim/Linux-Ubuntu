@@ -5,7 +5,7 @@
 ; BIND reverse data file for broadcast zone
 ;--------------------------------------------------------------------------------
 $TTL	604800
-@	IN	SOA	wynyarddemo.local. root.localhost. (
+@	IN	SOA	demo.local. root.localhost. (
 			      5		; Serial
 			 604800		; Refresh
 			  86400		; Retry
@@ -13,18 +13,18 @@ $TTL	604800
 			 604800 )	; Negative Cache TTL
 ;
 
-102.96.143.in-addr.arpa.	IN	NS	admin.wynyarddemo.local.
+102.96.143.in-addr.arpa.	IN	NS	admin.demo.local.
 
-140	IN	PTR	repository.wynyarddemo.local.
-141	IN	PTR	actasydm01.wynyarddemo.local.
-142     IN      PTR     actasydm02.wynyarddemo.local.
-143     IN      PTR     actasyds01.wynyarddemo.local.
-144     IN      PTR     actasyds02.wynyarddemo.local.
-145     IN      PTR     actasyds03.wynyarddemo.local.
-146     IN      PTR     actasyds04.wynyarddemo.local.
-150     IN      PTR     admin.wynyarddemo.local.
-151     IN      PTR     actasyddc01.wynyarddemo.local.
-152     IN      PTR     actasydui01.wynyarddemo.local.
-153     IN      PTR     actasydui02.wynyarddemo.local.
-159     IN      PTR     actasydui.wynyarddemo.local.
-147     IN      PTR     actasydnfs01.wynyarddemo.local.
+140	IN	PTR	repository.demo.local.
+141	IN	PTR	actasydm01.demo.local.
+142     IN      PTR     actasydm02.demo.local.
+143     IN      PTR     actasyds01.demo.local.
+144     IN      PTR     actasyds02.demo.local.
+145     IN      PTR     actasyds03.demo.local.
+146     IN      PTR     actasyds04.demo.local.
+150     IN      PTR     admin.demo.local.
+151     IN      PTR     actasyddc01.demo.local.
+152     IN      PTR     actasydui01.demo.local.
+153     IN      PTR     actasydui02.demo.local.
+159     IN      PTR     actasydui.demo.local.
+147     IN      PTR     actasydnfs01.demo.local.

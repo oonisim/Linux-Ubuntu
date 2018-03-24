@@ -13,7 +13,7 @@ $TTL	604800
 			 604800 )	; Negative Cache TTL
 ;
 
-102.96.143.in-addr.arpa.	IN	NS	admin.wynyarddemo.local.
+102.96.143.in-addr.arpa.	IN	NS	admin.demo.local.
 
 140	IN	PTR	repository.demo.local.
 141	IN	PTR	sydm01.emo.local.
