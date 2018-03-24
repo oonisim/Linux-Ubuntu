@@ -9,13 +9,13 @@ os="ubuntu"
 OS="Ubuntu"
 OSVERSION="14.04"
 
-repodir="/home/wynadmin/repository"
+repodir="/home/admin/repository"
 repository="Linux-Ubuntu"
 giturl="https://github.com/oonisim/${repository}.git"
 gitdir="${repodir}/${repository}/Installation/Automation/${OSVERSION}"
 
 cgiusr="www-data"
-cgigrp="wynadmin"
+cgigrp="admin"
 wwwdir="/var/www"
 cgidir="/var/www/cgi-bin/installations/${os}/${OSVERSION}"
 

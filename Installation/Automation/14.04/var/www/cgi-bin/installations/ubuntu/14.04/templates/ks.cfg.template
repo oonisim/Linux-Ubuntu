@@ -46,7 +46,7 @@ mouse
 #Root password
 #rootpw --disabled
 #Initial user
-#user wynadmin --fullname "wynadmin" --iscrypted --password $1$rSy6Q8hM$RW0fkvABI2lrcROMW1th70
+#user admin --fullname "admin" --iscrypted --password $1$rSy6Q8hM$RW0fkvABI2lrcROMW1th70
 #System authorization infomation
 #auth  --useshadow  --enablemd5
 

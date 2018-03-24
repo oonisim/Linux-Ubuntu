@@ -6,14 +6,14 @@
 # Git
 #--------------------------------------------------------------------------------
 class site_admin::git {
-    file {'/home/wynadmin/repository':
-        path => '/home/wynadmin/repository',
+    file {'/home/admin/repository':
+        path => '/home/admin/repository',
         ensure => 'directory',
     }
-    vcsrepo { '/home/wynadmin/repository':
+    vcsrepo { '/home/admin/repository':
         ensure   => present,
         provider => git,
         source   => 'ssh://gitolite3@gitgs.wynyardgroup.com:443/TechSAPAC/Technical/Linux/Ubuntu/Installation/Automation/14.04',
-        require  => File['/home/wynadmin/.ssh/gitgs.ssh'],
+        require  => File['/home/admin/.ssh/gitgs.ssh'],
     }
 }
