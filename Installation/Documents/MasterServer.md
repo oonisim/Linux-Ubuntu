@@ -16,7 +16,7 @@ In case to use Git server.
 
 ## Script
 
-<span style="color: rgb(51,51,51);font-size: 14.0px;line-height: 1.42857;">See </span>[mastersetup.sh](https://git.wynyardgroup.com/monishi/Linux-Ubuntu/blob/master/Installation/Automation/14.04/utilities/master/mastersetup.sh)<a style="font-size: 14.0px;line-height: 1.42857;"></a> <span style="color: rgb(51,51,51);font-size: 14.0px;line-height: 1.42857;">in the Git repository.</span>
+<span style="color: rgb(51,51,51);font-size: 14.0px;line-height: 1.42857;">See </span>[mastersetup.sh](https://github.com/oonisim/Puppet-Ubuntu-Autoinstallation/blob/master/Installation/Automation/14.04/utilities/master/mastersetup.sh)<a style="font-size: 14.0px;line-height: 1.42857;"></a> <span style="color: rgb(51,51,51);font-size: 14.0px;line-height: 1.42857;">in the Git repository.</span>
 
 * * *
 
